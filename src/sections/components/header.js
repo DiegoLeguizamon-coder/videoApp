@@ -7,7 +7,7 @@ import{
     Platform,
     Image
 } from 'react-native';
-import { getDefaultContainerIdAsync } from 'expo-contacts';
+
 
 function Header(props){
     return(
