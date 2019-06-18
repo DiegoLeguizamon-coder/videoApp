@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 
     },
     container:{
-        paddingVertical: 20,
+        paddingVertical: 30,
         flexDirection: 'row'
     },
     right: {

@@ -1,11 +1,13 @@
-import React,{ Component } from 'react';
+import React, { Component } from 'react';
 import {
     FlatList,
     Text
 } from 'react-native';
 
+import Layout from '../components/suggestion-list-layout.js'
+
 class SuggestionList extends Component {
-    render(){
+    render() {
         const list = [
             {
                 title: 'Peli 1',
@@ -16,12 +18,15 @@ class SuggestionList extends Component {
                 key: '2'
             }
         ]
-        return(
-            
-            <FlatList
-                data={list}
-                renderItem={({ item }) => <Text>{item.title}</Text>}
-            />
+        return (
+            <Layout
+            title = "Recomendado para ti">
+                <FlatList
+                    data={list}
+                    ListEmptyComponent={()=> <Text>No hay elementos en la lista</Text>}
+                    renderItem={({ item }) => <Text>{item.title}</Text>}
+                />
+            </Layout>
         )
     }
 }
